@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Susana Adrian · Invitación</title>
+<meta name="theme-color" content="#1a0003">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --glow: 0 0 6px rgba(255,255,255,.55), 0 0 18px rgba(255,120,120,.55), 0 0 36px rgba(255,40,40,.35); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: #1a0003; }
+  body { font-family: 'Montserrat', Arial, sans-serif; color: #fff; overflow-x: hidden; }
+
+  /* Fondo en video */
+  .fondo { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .velo { position: fixed; inset: 0; z-index: -1;
+    background: radial-gradient(ellipse at center, rgba(20,0,2,.15) 0%, rgba(20,0,2,.55) 100%); }
+
+  .contenido { min-height: 100svh; max-width: 440px; margin: 0 auto;
+    padding: calc(env(safe-area-inset-top, 0px) + 7vh) 28px calc(env(safe-area-inset-bottom, 0px) + 5vh);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; gap: 3.2vh; }
+
+  /* Efecto de aparición: del brillo borroso al texto nítido */
+  .rev { opacity: 0; filter: blur(10px); transform: scale(1.03);
+    animation: aparecer 2.4s cubic-bezier(.22,.61,.36,1) forwards; animation-delay: var(--d, 0s); }
+  @keyframes aparecer {
+    0%   { opacity: 0; filter: blur(10px); text-shadow: 0 0 30px rgba(255,255,255,.9); }
+    45%  { opacity: .55; filter: blur(3px); }
+    100% { opacity: 1; filter: blur(0); transform: scale(1); text-shadow: var(--glow); }
+  }
+  .rev { text-shadow: var(--glow); }
+
+  .intro { font-size: 11px; letter-spacing: .32em; text-transform: uppercase; font-weight: 400; line-height: 2; }
+  .titulo { font-family: 'Great Vibes', cursive; font-weight: 400; font-size: clamp(58px, 18vw, 84px); line-height: .95; }
+  .nombre { font-size: 15px; letter-spacing: .3em; text-transform: uppercase; font-weight: 400; }
+
+  /* Fecha con líneas como en el original */
+  .fecha { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 14px; width: 100%; max-width: 330px; }
+  .fecha .lado { font-size: 10.5px; letter-spacing: .25em; text-transform: uppercase; position: relative; padding: 8px 0; }
+  .fecha .lado::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: rgba(255,255,255,.8);
+    transform: scaleX(0); animation: linea 1.4s ease forwards; animation-delay: var(--d, 0s); }
+  @keyframes linea { to { transform: scaleX(1); } }
+  .fecha .centro { display: flex; flex-direction: column; align-items: center; line-height: 1.25; }
+  .fecha .mes { font-size: 10.5px; letter-spacing: .3em; text-transform: uppercase; }
+  .fecha .dia { font-size: 26px; font-weight: 300; letter-spacing: .05em; }
+
+  .lugar { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; line-height: 2; }
+  .lugar strong { font-weight: 500; }
+
+  .vestimenta { font-size: 10.5px; letter-spacing: .26em; text-transform: uppercase; line-height: 2; }
+  .vestimenta .colores { display: flex; gap: 10px; justify-content: center; margin-top: 6px; align-items: center; }
+  .punto { width: 16px; height: 16px; border-radius: 50%; border: 1px solid rgba(255,255,255,.7); display: inline-block; }
+  .crema { background: #efe3cc; } .marron { background: #6b4a35; }
+
+  .botones { display: flex; flex-direction: row; gap: 10px; width: 100%; max-width: 260px; margin-top: 4px; text-shadow: none; }
+  .orn { display: flex; align-items: center; gap: 12px; width: 100%; max-width: 310px; opacity: .85; }
+  .orn::before, .orn::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.7)); }
+  .orn::after { transform: scaleX(-1); }
+  .orn i { width: 7px; height: 7px; border: 1px solid #fff; transform: rotate(45deg); }
+  .btn { flex: 1; display: flex; align-items: center; justify-content: center;
+    padding: 13px 10px; border-radius: 999px; text-decoration: none; font-size: 10.5px; letter-spacing: .24em;
+    text-transform: uppercase; font-weight: 300; color: #fff;
+    border: 1px solid rgba(255,255,255,.4); background: transparent;
+    transition: background .3s ease, border-color .3s ease, opacity .3s ease; }
+  .btn:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.75); }
+  .btn.pri { background: #fff; color: #2a0306; border-color: #fff; font-weight: 400; }
+  .btn.pri:hover { opacity: .88; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rev { animation-duration: .01s; animation-delay: 0s; }
+    .fecha .lado::before { animation-duration: .01s; animation-delay: 0s; }
+  }
+</style>
+</head>
+<body>
+
+<video class="fondo" id="fondo" autoplay muted loop playsinline preload="auto" poster="fondo.jpg">
+  <source src="fondo.mp4" type="video/mp4">
+</video>
+<div class="velo"></div>
+
+<main class="contenido">
+  <p class="intro rev" style="--d:.6s">Estás invitado<br>a celebrar con</p>
+
+  <h1 class="titulo rev" style="--d:1.2s">Susana<br>Adrian</h1>
+
+  <div class="fecha">
+    <span class="lado rev" style="--d:2.2s">Sábado</span>
+    <span class="centro rev" style="--d:2.4s">
+      <span class="mes">Noviembre</span>
+      <span class="dia">21</span>
+    </span>
+    <span class="lado rev" style="--d:2.6s">8:00 PM</span>
+  </div>
+
+  <p class="lugar rev" style="--d:3.1s">
+    <strong>Club de la Armada Naval</strong><br>
+    de Santo Domingo<br>
+    Av. España
+  </p>
+
+  <div class="vestimenta rev" style="--d:3.6s">
+    Código de vestimenta
+    <div class="colores"><span class="punto crema"></span> Crema <span class="punto marron"></span> Marrón</div>
+  </div>
+
+  <div class="orn rev" style="--d:3.9s"><i></i></div>
+
+  <div class="botones rev" style="--d:4.2s">
+    <a class="btn" href="https://maps.app.goo.gl/rSC8HLRjQhjHF1Kj9" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn pri" target="_blank" rel="noopener" href="https://wa.me/17873269661?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20la%20invitaci%C3%B3n%20de%20Susana%20Adrian%20del%20s%C3%A1bado%2021%20de%20noviembre.%20Mi%20nombre%20es%3A%20">Confirmar</a>
+  </div>
+</main>
+
+<script>
+  // Autoplay silencioso; reintenta con el primer toque si el navegador lo bloqueó
+  (function () {
+    var v = document.getElementById('fondo');
+    v.muted = true;
+    function intentar() { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    intentar();
+    ['touchstart', 'click', 'scroll'].forEach(function (e) {
+      window.addEventListener(e, function once() { if (v.paused) intentar(); window.removeEventListener(e, once); }, { passive: true });
+    });
+  })();
+</script>
+</body>
+</html>
