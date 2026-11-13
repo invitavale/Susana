@@ -3,57 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Susana Adrian · Invitación</title>
+<title>Cumpleaños de Susana Adrian · 57 años</title>
 <meta name="theme-color" content="#1a0003">
-<meta name="description" content="Sábado 21 de noviembre · 8:00 PM · Club de la Armada Naval de Santo Domingo. ¡Te esperamos!">
+<meta name="description" content="¡Celebremos los 57 años de Susana Adrian! Sábado 21 de noviembre · 8:00 PM · Club de la Armada Naval de Santo Domingo.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Invitavale">
-<meta property="og:title" content="Susana Adrian · Estás invitado">
-<meta property="og:description" content="Sábado 21 de noviembre · 8:00 PM · Club de la Armada Naval de Santo Domingo. ¡Te esperamos!">
+<meta property="og:title" content="¡Cumpleaños de Susana Adrian! · 57 años">
+<meta property="og:description" content="Sábado 21 de noviembre · 8:00 PM · Club de la Armada Naval de Santo Domingo. ¡Te esperamos para celebrar!">
 <meta property="og:url" content="https://invitavale.com/Susana/">
 <meta property="og:image" content="https://invitavale.com/Susana/portada.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Invitación de Susana Adrian">
+<meta property="og:image:alt" content="Invitación al cumpleaños 57 de Susana Adrian">
 <meta property="og:locale" content="es_DO">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://invitavale.com/Susana/portada.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <style>
-  :root { --glow: 0 0 6px rgba(255,255,255,.55), 0 0 18px rgba(255,120,120,.55), 0 0 36px rgba(255,40,40,.35); }
+  :root {
+    --glow: 0 0 6px rgba(255,255,255,.55), 0 0 18px rgba(255,120,120,.55), 0 0 36px rgba(255,40,40,.35);
+    --oro: linear-gradient(100deg, #b9862f 0%, #f7e3a3 22%, #fff8e1 32%, #e8c46a 45%, #a8741f 60%, #f3d68a 78%, #fff3cf 88%, #c99a3e 100%);
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { height: 100%; background: #1a0003 url("fondo.jpg") center / cover no-repeat; }
-  body { min-height: 100%; background: transparent; }
-  body { font-family: 'Montserrat', Arial, sans-serif; color: #fff; overflow-x: hidden; }
+  html { min-height: 100%; background: #1a0003 url("fondo.jpg") center / cover no-repeat; }
+  body { min-height: 100%; background: transparent; font-family: 'Montserrat', Arial, sans-serif; color: #fff; overflow-x: hidden; }
 
-  /* Fondo en video */
   .fondo { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
   .velo { position: fixed; inset: 0; z-index: -1;
     background: radial-gradient(ellipse at center, rgba(20,0,2,.15) 0%, rgba(20,0,2,.55) 100%); }
+  #confeti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; }
 
   .contenido { min-height: 100svh; max-width: 440px; margin: 0 auto;
-    padding: calc(env(safe-area-inset-top, 0px) + 7vh) 28px calc(env(safe-area-inset-bottom, 0px) + 5vh);
+    padding: calc(env(safe-area-inset-top, 0px) + 6vh) 26px calc(env(safe-area-inset-bottom, 0px) + 6vh);
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    text-align: center; gap: 3.2vh; }
+    text-align: center; gap: 2.8vh; }
 
-  /* Efecto de aparición: del brillo borroso al texto nítido */
-  .rev { opacity: 0; filter: blur(10px); transform: scale(1.03);
-    animation: aparecer 2.4s cubic-bezier(.22,.61,.36,1) forwards; animation-delay: var(--d, 0s); }
+  .rev { opacity: 0; filter: blur(10px); transform: scale(1.03); text-shadow: var(--glow);
+    animation: aparecer 2.2s cubic-bezier(.22,.61,.36,1) forwards; animation-delay: var(--d, 0s); }
   @keyframes aparecer {
-    0%   { opacity: 0; filter: blur(10px); text-shadow: 0 0 30px rgba(255,255,255,.9); }
+    0%   { opacity: 0; filter: blur(10px); }
     45%  { opacity: .55; filter: blur(3px); }
-    100% { opacity: 1; filter: blur(0); transform: scale(1); text-shadow: var(--glow); }
+    100% { opacity: 1; filter: blur(0); transform: scale(1); }
   }
-  .rev { text-shadow: var(--glow); }
 
+  .feliz { font-family: 'Great Vibes', cursive; font-size: clamp(30px, 9vw, 38px); line-height: 1; color: #fbe7b5; }
   .intro { font-size: 11px; letter-spacing: .32em; text-transform: uppercase; font-weight: 400; line-height: 2; }
-  .titulo { font-family: 'Great Vibes', cursive; font-weight: 400; font-size: clamp(58px, 18vw, 84px); line-height: .95; }
-  .nombre { font-size: 15px; letter-spacing: .3em; text-transform: uppercase; font-weight: 400; }
+  .titulo { font-family: 'Great Vibes', cursive; font-weight: 400; font-size: clamp(62px, 19vw, 88px); line-height: .92; }
 
-  /* Fecha con líneas como en el original */
+  /* 57 años */
+  .edad { position: relative; display: flex; flex-direction: column; align-items: center; padding: 6px 30px 0;
+    opacity: 0; transform: scale(.6); animation: pop 1.3s cubic-bezier(.2,1.4,.4,1) forwards; animation-delay: var(--d, 0s); }
+  @keyframes pop { 0% { opacity: 0; transform: scale(.25); filter: blur(10px); } 55% { opacity: 1; transform: scale(1.12); filter: blur(0); } 75% { transform: scale(.96); } 100% { opacity: 1; transform: scale(1); } }
+  .edad { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .edad::before { content: ""; position: absolute; left: 50%; top: 45%; width: 260px; height: 260px; margin: -130px 0 0 -130px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,236,180,.9) 0%, rgba(255,190,90,.45) 28%, rgba(255,60,40,0) 70%);
+    opacity: 0; transform: scale(.2); animation: destello 1.6s ease-out forwards; animation-delay: var(--d, 0s); pointer-events: none; z-index: -1; }
+  @keyframes destello { 0% { opacity: 0; transform: scale(.2); } 30% { opacity: 1; transform: scale(1); } 100% { opacity: .18; transform: scale(1.25); } }
+  .num { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500;
+    font-size: clamp(104px, 33vw, 140px); line-height: .9; letter-spacing: -.02em;
+    background: var(--oro); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text;
+    color: transparent; -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(255,210,130,.55)) drop-shadow(0 0 28px rgba(255,60,40,.45));
+    animation: oro 5s linear infinite; }
+  @keyframes oro { from { background-position: 0% 0; } to { background-position: 250% 0; } }
+  .anios { font-family: 'Great Vibes', cursive; font-size: clamp(34px, 10vw, 42px); line-height: .8; margin-top: -6px;
+    color: #fbe7b5; text-shadow: 0 0 8px rgba(255,220,150,.6), 0 0 22px rgba(255,80,60,.45); }
+  .chispa { position: absolute; width: var(--s, 14px); height: var(--s, 14px); background: #fff6d8;
+    clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+    filter: drop-shadow(0 0 6px #ffd98a); opacity: 0; animation: titila 2.4s ease-in-out infinite; animation-delay: var(--t, 0s); }
+  @keyframes titila { 0%, 100% { opacity: 0; transform: scale(.3) rotate(0deg); } 50% { opacity: 1; transform: scale(1) rotate(45deg); } }
+
   .fecha { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 14px; width: 100%; max-width: 330px; }
   .fecha .lado { font-size: 10.5px; letter-spacing: .25em; text-transform: uppercase; position: relative; padding: 8px 0; }
   .fecha .lado::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: rgba(255,255,255,.8);
@@ -65,17 +87,17 @@
 
   .lugar { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; line-height: 2; }
   .lugar strong { font-weight: 500; }
-
   .vestimenta { font-size: 10.5px; letter-spacing: .26em; text-transform: uppercase; line-height: 2; }
   .vestimenta .colores { display: flex; gap: 10px; justify-content: center; margin-top: 6px; align-items: center; }
   .punto { width: 16px; height: 16px; border-radius: 50%; border: 1px solid rgba(255,255,255,.7); display: inline-block; }
   .crema { background: #efe3cc; } .marron { background: #6b4a35; }
 
-  .botones { display: flex; flex-direction: row; gap: 10px; width: 100%; max-width: 260px; margin-top: 4px; text-shadow: none; }
   .orn { display: flex; align-items: center; gap: 12px; width: 100%; max-width: 310px; opacity: .85; }
   .orn::before, .orn::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.7)); }
   .orn::after { transform: scaleX(-1); }
   .orn i { width: 7px; height: 7px; border: 1px solid #fff; transform: rotate(45deg); }
+
+  .botones { display: flex; gap: 10px; width: 100%; max-width: 260px; margin-top: 4px; text-shadow: none; }
   .btn { flex: 1; display: flex; align-items: center; justify-content: center;
     padding: 13px 10px; border-radius: 999px; text-decoration: none; font-size: 10.5px; letter-spacing: .24em;
     text-transform: uppercase; font-weight: 300; color: #fff;
@@ -86,8 +108,8 @@
   .btn.pri:hover { opacity: .88; }
 
   @media (prefers-reduced-motion: reduce) {
-    .rev { animation-duration: .01s; animation-delay: 0s; }
-    .fecha .lado::before { animation-duration: .01s; animation-delay: 0s; }
+    .rev, .edad, .fecha .lado::before { animation-duration: .01s; animation-delay: 0s; }
+    .num, .chispa { animation: none; } .chispa { opacity: .8; }
   }
 </style>
 </head>
@@ -97,22 +119,35 @@
   <source src="fondo.mp4" type="video/mp4">
 </video>
 <div class="velo"></div>
+<canvas id="confeti"></canvas>
 
 <main class="contenido">
-  <p class="intro rev" style="--d:.6s">Estás invitado<br>a celebrar con</p>
+  <p class="feliz rev" style="--d:.4s">¡Feliz cumpleaños!</p>
+  <p class="intro rev" style="--d:.9s">Acompáñanos a celebrar<br>los años de</p>
 
-  <h1 class="titulo rev" style="--d:1.2s">Susana<br>Adrian</h1>
+  <h1 class="titulo rev" style="--d:1.4s">Susana<br>Adrian</h1>
+
+  <div class="edad" id="edad" style="--d:5.9s" aria-label="57 años">
+    <span class="chispa" style="top:2%;left:4%;--s:16px;--t:.2s"></span>
+    <span class="chispa" style="top:10%;right:2%;--s:12px;--t:1.1s"></span>
+    <span class="chispa" style="top:48%;left:-2%;--s:10px;--t:1.7s"></span>
+    <span class="chispa" style="top:40%;right:-3%;--s:18px;--t:.6s"></span>
+    <span class="chispa" style="bottom:4%;left:16%;--s:9px;--t:2s"></span>
+    <span class="chispa" style="bottom:12%;right:14%;--s:11px;--t:1.4s"></span>
+    <span class="num">57</span>
+    <span class="anios">años</span>
+  </div>
 
   <div class="fecha">
-    <span class="lado rev" style="--d:2.2s">Sábado</span>
-    <span class="centro rev" style="--d:2.4s">
+    <span class="lado rev" style="--d:2.4s">Sábado</span>
+    <span class="centro rev" style="--d:2.6s">
       <span class="mes">Noviembre</span>
       <span class="dia">21</span>
     </span>
-    <span class="lado rev" style="--d:2.6s">8:00 PM</span>
+    <span class="lado rev" style="--d:2.8s">8:00 PM</span>
   </div>
 
-  <p class="lugar rev" style="--d:3.1s">
+  <p class="lugar rev" style="--d:3.2s">
     <strong>Club de la Armada Naval</strong><br>
     de Santo Domingo<br>
     Av. España
@@ -125,14 +160,13 @@
 
   <div class="orn rev" style="--d:3.9s"><i></i></div>
 
-  <div class="botones rev" style="--d:4.2s">
+  <div class="botones rev" style="--d:4.3s">
     <a class="btn" href="https://maps.app.goo.gl/rSC8HLRjQhjHF1Kj9" target="_blank" rel="noopener">Mapa</a>
-    <a class="btn pri" target="_blank" rel="noopener" href="https://wa.me/17873269661?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20la%20invitaci%C3%B3n%20de%20Susana%20Adrian%20del%20s%C3%A1bado%2021%20de%20noviembre.%20Mi%20nombre%20es%3A%20">Confirmar</a>
+    <a class="btn pri" target="_blank" rel="noopener" href="https://wa.me/17873269661?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20cumplea%C3%B1os%20de%20Susana%20Adrian%20del%20s%C3%A1bado%2021%20de%20noviembre.%20Mi%20nombre%20es%3A%20">Confirmar</a>
   </div>
 </main>
 
 <script>
-  // Autoplay silencioso; reintenta con el primer toque si el navegador lo bloqueó
   (function () {
     var v = document.getElementById('fondo');
     v.muted = true;
@@ -141,6 +175,71 @@
     ['touchstart', 'click', 'scroll'].forEach(function (e) {
       window.addEventListener(e, function once() { if (v.paused) intentar(); window.removeEventListener(e, once); }, { passive: true });
     });
+  })();
+
+  // Confeti: estallido desde el 57 + lluvia desde arriba. Toca el 57 para repetir.
+  (function () {
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var c = document.getElementById('confeti'), x = c.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, 2), W, H, ps = [], corriendo = false;
+    function tam() { W = innerWidth; H = innerHeight; c.width = W * dpr; c.height = H * dpr; x.setTransform(dpr, 0, 0, dpr, 0, 0); }
+    tam(); addEventListener('resize', tam);
+    var colores = ['#f7e3a3', '#e8c46a', '#fff3cf', '#d4a64a', '#b9862f', '#ffffff', '#ffd6d6', '#ff4d5e', '#efe3cc'];
+    var formas = ['rect', 'rect', 'rect', 'circ', 'cinta', 'cinta', 'estrella'];
+    function pieza(xx, yy, vx, vy) {
+      return { x: xx, y: yy, vx: vx, vy: vy, rot: Math.random() * 6.3, vrot: (Math.random() - .5) * .25,
+        flip: Math.random() * 6.3, vflip: .08 + Math.random() * .12, ond: Math.random() * 6.3, vond: .03 + Math.random() * .05,
+        t: 5 + Math.random() * 6, forma: formas[(Math.random() * formas.length) | 0], col: colores[(Math.random() * colores.length) | 0],
+        brillo: Math.random() < .35, vida: 1 };
+    }
+    function estallido() {
+      var r = document.getElementById('edad').getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height * .45;
+      for (var i = 0; i < 220; i++) {
+        var a = -Math.PI / 2 + (Math.random() - .5) * Math.PI * 1.6, v = 6 + Math.random() * 11;
+        ps.push(pieza(cx, cy, Math.cos(a) * v, Math.sin(a) * v));
+      }
+    }
+    function lluvia(n, dur) {
+      var hechos = 0, porTick = n / (dur / 16);
+      (function soltar() {
+        for (var k = 0; k < porTick && hechos < n; k++, hechos++) ps.push(pieza(Math.random() * W, -20 - Math.random() * 40, (Math.random() - .5) * 1.5, 1 + Math.random() * 2));
+        if (hechos < n) setTimeout(soltar, 16);
+      })();
+    }
+    function estrella(t) {
+      x.beginPath();
+      for (var i = 0; i < 10; i++) { var rr = i % 2 ? t * .45 : t, a = i * Math.PI / 5 - Math.PI / 2; x.lineTo(Math.cos(a) * rr, Math.sin(a) * rr); }
+      x.closePath(); x.fill();
+    }
+    function paso() {
+      x.clearRect(0, 0, W, H);
+      ps = ps.filter(function (p) { return p.vida > 0 && p.y < H + 40; });
+      for (var i = 0; i < ps.length; i++) {
+        var p = ps[i];
+        p.vx *= .97; p.vy = Math.min(p.vy * .97 + .12, 3.2);
+        p.ond += p.vond; p.x += p.vx + Math.sin(p.ond) * 1.1; p.y += p.vy;
+        p.rot += p.vrot; p.flip += p.vflip;
+        if (p.y > H * .82) p.vida -= .02;
+        var esc = Math.cos(p.flip);
+        x.save(); x.globalAlpha = Math.max(0, Math.min(1, p.vida));
+        x.translate(p.x, p.y); x.rotate(p.rot); x.scale(1, esc);
+        x.fillStyle = p.brillo && esc > .6 ? '#fffaf0' : p.col;
+        if (p.forma === 'rect') x.fillRect(-p.t / 2, -p.t * .35, p.t, p.t * .7);
+        else if (p.forma === 'circ') { x.beginPath(); x.arc(0, 0, p.t * .42, 0, 6.3); x.fill(); }
+        else if (p.forma === 'cinta') {
+          x.strokeStyle = x.fillStyle; x.lineWidth = 2.2; x.lineCap = 'round'; x.beginPath();
+          x.moveTo(-p.t * 1.4, 0); x.bezierCurveTo(-p.t * .5, -p.t, p.t * .5, p.t, p.t * 1.4, 0); x.stroke();
+        } else { x.shadowColor = '#ffd98a'; x.shadowBlur = 8; estrella(p.t * .8); }
+        x.restore();
+      }
+      if (ps.length) requestAnimationFrame(paso); else { x.clearRect(0, 0, W, H); corriendo = false; }
+    }
+    function fiesta() {
+      estallido(); lluvia(260, 2600);
+      if (!corriendo) { corriendo = true; requestAnimationFrame(paso); }
+    }
+    var d57 = parseFloat(getComputedStyle(document.getElementById('edad')).getPropertyValue('--d')) || 5.9;
+    setTimeout(fiesta, d57 * 1000 + 450);
+    document.getElementById('edad').addEventListener('click', fiesta);
   })();
 </script>
 </body>
